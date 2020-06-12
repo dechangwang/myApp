@@ -217,8 +217,20 @@ class Model_Dialog extends React.Component {
           onOk={this.handleOk}
           onCancel={onCancel}
 		  okButtonProps={{ visible: false }}
+		  style={{width:800}}
         >
-          <img src = "https://images2018.cnblogs.com/blog/75922/201805/75922-20180531215929038-468528048.png"/>
+          <img src = "http://localhost:8080/images/result.PNG" style={{width:470}}/>
+		  
+		  <table>
+			<td style={{backgroundColor:"#F9FF19"}}><b> 黄色：建筑</b></td>
+			<td>    </td>
+			<td style={{backgroundColor:"#0CA940"}}><b> 绿色：植被</b></td>
+			<td>    </td>
+			<td style={{backgroundColor:"#305DFD"}}><b> 蓝色：水体</b></td>
+			<td>    </td>
+			<td style={{backgroundColor:"#FF0119"}}><b> 红色：道路</b></td>
+		  </table>
+		    
         </Modal>
       </div>
     );

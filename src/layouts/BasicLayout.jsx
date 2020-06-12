@@ -141,25 +141,15 @@ const BasicLayout = props => {
             <span>{route.breadcrumbName}</span>
           );
         }}
-        footerRender={footerRender}
+        
         menuDataRender={menuDataRender}
         rightContentRender={() => <RightContent />}
         {...props}
         {...settings}
       >
-        <Authorized authority={authorized.authority} noMatch={noMatch}>
-          {children}
-        </Authorized>
+        
       </ProLayout>
-      <SettingDrawer
-        settings={settings}
-        onSettingChange={config =>
-          dispatch({
-            type: 'settings/changeSetting',
-            payload: config,
-          })
-        }
-      />
+      
     </>
   );
 };
